@@ -1,0 +1,17 @@
+{
+  "name": "Kubernetes Dev Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "redhat.vscode-yaml"
+      ]
+    }
+  },
+  "forwardPorts": [8000, 8080, 3000],
+  "postCreateCommand": "kubectl version --client && helm version"
+}
+
